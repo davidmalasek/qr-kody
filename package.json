@@ -1,0 +1,44 @@
+{
+  "name": "qr-kody",
+  "version": "1.0.0",
+  "description": "Jednoduchá terminálová aplikace pro generování stylových QR kódů a QR plateb",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "qr": "./bin/qr.js",
+    "qr-kody": "./bin/qr.js"
+  },
+  "scripts": {
+    "start": "node bin/qr.js",
+    "test": "node --test test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmalasek/qr-kody.git"
+  },
+  "keywords": [
+    "qr",
+    "qrcode",
+    "qr-kod",
+    "spayd",
+    "qr-platba",
+    "terminal-ui",
+    "cli",
+    "google-fonts",
+    "svg",
+    "jpeg"
+  ],
+  "author": "David Malášek <davidmalasek@post.cz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidmalasek/qr-kody/issues"
+  },
+  "homepage": "https://github.com/davidmalasek/qr-kody#readme",
+  "dependencies": {
+    "@inquirer/prompts": "^8.7.4",
+    "boxen": "^9.0.0",
+    "chalk": "^6.0.1",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5"
+  }
+}
