@@ -4,6 +4,9 @@
 
 import chalk from 'chalk';
 
+// Vynutíme plnou podporu 24-bit TrueColor barev v libovolném terminálu
+chalk.level = Math.max(chalk.level || 0, 3);
+
 export const THEME = {
   primary: chalk.hex('#D97706'),      // Warm amber
   accent: chalk.hex('#F59E0B'),       // Bright amber
@@ -27,6 +30,37 @@ export const PRESET_COLORS = [
   { name: 'Čokoládově hnědá', hex: '#78350F', badge: '🟫 Hnědá' },
   { name: 'Vlastní HEX kód...', hex: 'custom', badge: '🎨 Zadat vlastní HEX' },
 ];
+
+/**
+ * Barevný gradient pro ASCII logo (Amber -> Coral -> Pink -> Purple -> Cyan -> Emerald)
+ */
+const LOGO_GRADIENT = [
+  '#F59E0B', '#F59E0B', '#F59E0B', '#F59E0B', // Q (Amber)
+  '#F97316',                                   // mezera
+  '#F97316', '#F97316', '#F97316', '#F97316', // R (Orange)
+  '#FB7185', '#FB7185', '#FB7185',             // mezera
+  '#EC4899', '#EC4899', '#EC4899',             // K (Pink)
+  '#D946EF',                                   // mezera
+  '#A855F7', '#A855F7', '#A855F7', '#A855F7', // Ó (Purple)
+  '#06B6D4',                                   // mezera
+  '#0EA5E9', '#0EA5E9', '#0EA5E9', '#0EA5E9', // D (Sky Cyan)
+  '#10B981',                                   // mezera
+  '#10B981', '#10B981', '#10B981',             // Y (Emerald)
+];
+
+/**
+ * Obarví řádek ASCII loga plynulým duhovým gradientem
+ * @param {string} line
+ * @returns {string}
+ */
+export function colorizeLogoLine(line) {
+  let result = '';
+  for (let i = 0; i < line.length; i++) {
+    const color = LOGO_GRADIENT[i] || '#38BDF8';
+    result += chalk.hex(color).bold(line[i]);
+  }
+  return result;
+}
 
 /**
  * Validace HEX barevného kódu

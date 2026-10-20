@@ -4,6 +4,8 @@
  * QR Kódy CLI - Spouštěcí soubor
  */
 
+process.env.FORCE_COLOR = process.env.FORCE_COLOR || '3';
+
 import { run } from '../src/index.js';
 
 process.on('SIGINT', () => {
