@@ -6,6 +6,7 @@ import { select, input, confirm, Separator } from '@inquirer/prompts';
 import chalk from 'chalk';
 import path from 'path';
 import fs from 'fs';
+import { execSync } from 'child_process';
 
 import { validateAccount } from './core/bank.js';
 import { generateSpayd } from './core/spayd.js';
@@ -119,9 +120,15 @@ async function promptPaymentDetails() {
     }
   });
 
-  // 8. Jméno příjemce
+  // 8. Jméno příjemce (automatická detekce z gitu jako výchozí hodnota)
+  let defaultRecipient = '';
+  try {
+    defaultRecipient = execSync('git config user.name', { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] }).trim();
+  } catch {}
+
   const recipient = await input({
-    message: 'Jméno příjemce (např. Jan Novák, max 35 znaků) [Enter pro přeskočení]:',
+    message: 'Jméno příjemce platby (max 35 znaků):',
+    default: defaultRecipient || undefined,
     validate: (value) => {
       if (!value) return true;
       if (value.length > 35) return `Jméno je příliš dlouhé (${value.length}/35 znaků).`;

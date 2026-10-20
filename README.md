@@ -11,6 +11,7 @@ Inspirováno rozhraním nástrojů jako **Claude Code CLI** – ovládá se jedn
 ---
 
 ```text
+                  ▄▀
   █▀▀█ █▀▀█   █░█ █▀▀█ █▀▀▄ █░█
   █░░█ █▄▄▀   █▀▄ █░░█ █░░█ █▄█
   ▀▀▀█ ▀░▀▀   ▀░▀ ▀▀▀▀ ▀▀▀░ ░▀░

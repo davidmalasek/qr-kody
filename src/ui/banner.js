@@ -15,6 +15,7 @@ export function printBanner() {
   const tip = chalk.dim('Ovládání: ') + chalk.cyan('↑/↓') + chalk.dim(' výběr  •  ') + chalk.cyan('Enter') + chalk.dim(' potvrzení');
 
   const content = [
+    `  ${' '.repeat(16)}${chalk.hex('#38BDF8')('▄▀')}`,
     `  ${chalk.hex('#F59E0B')('█▀▀█ █▀▀█')}   ${chalk.hex('#38BDF8')('█░█ █▀▀█ █▀▀▄ █░█')}`,
     `  ${chalk.hex('#F59E0B')('█░░█ █▄▄▀')}   ${chalk.hex('#38BDF8')('█▀▄ █░░█ █░░█ █▄█')}`,
     `  ${chalk.hex('#F59E0B')('▀▀▀█ ▀░▀▀')}   ${chalk.hex('#38BDF8')('▀░▀ ▀▀▀▀ ▀▀▀░ ░▀░')}`,
