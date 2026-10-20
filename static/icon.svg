@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="20" y1="20" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)" stroke="#334155" stroke-width="2"/>
+  
+  <!-- Top-left finder pattern -->
+  <rect x="22" y="22" width="30" height="30" rx="6" stroke="url(#accent)" stroke-width="4"/>
+  <rect x="30" y="30" width="14" height="14" rx="3" fill="url(#accent)"/>
+  
+  <!-- Top-right finder pattern -->
+  <rect x="76" y="22" width="30" height="30" rx="6" stroke="url(#accent)" stroke-width="4"/>
+  <rect x="84" y="30" width="14" height="14" rx="3" fill="url(#accent)"/>
+  
+  <!-- Bottom-left finder pattern -->
+  <rect x="22" y="76" width="30" height="30" rx="6" stroke="url(#accent)" stroke-width="4"/>
+  <rect x="30" y="84" width="14" height="14" rx="3" fill="url(#accent)"/>
+  
+  <!-- Data modules -->
+  <rect x="60" y="24" width="8" height="8" rx="2" fill="url(#accent)"/>
+  <rect x="60" y="38" width="8" height="8" rx="2" fill="#E2E8F0"/>
+  <rect x="60" y="60" width="8" height="8" rx="2" fill="url(#accent)"/>
+  <rect x="76" y="60" width="8" height="8" rx="2" fill="#E2E8F0"/>
+  <rect x="92" y="60" width="8" height="8" rx="2" fill="url(#accent)"/>
+  <rect x="60" y="76" width="8" height="8" rx="2" fill="#E2E8F0"/>
+  <rect x="76" y="76" width="12" height="12" rx="3" fill="url(#accent)"/>
+  <rect x="94" y="80" width="12" height="8" rx="2" fill="#E2E8F0"/>
+  <rect x="60" y="94" width="8" height="12" rx="2" fill="url(#accent)"/>
+  <rect x="80" y="96" width="26" height="10" rx="3" fill="url(#accent)"/>
+</svg>
