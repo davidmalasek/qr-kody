@@ -14,17 +14,6 @@
   <a href="#instalace"><b>Nainstalovat příkaz qr</b></a>
 </p>
 
-```text
-                  ▄▀
-  █▀▀█ █▀▀█   █░█ █▀▀█ █▀▀▄ █░█
-  █░░█ █▄▄▀   █▀▄ █░░█ █░░█ █▄█
-  ▀▀▀█ ▀░▀▀   ▀░▀ ▀▀▀▀ ▀▀▀░ ░▀░
-
-  QR KÓDY CLI • Generátor stylových QR kódů
-```
-
-Pro vývojáře a programátory, kteří nechtějí kvůli jednomu QR kódu otevírat prohlížeč a proklikávat se reklamami na pochybných webech. Stačí v terminálu napsat `qr`.
-
 ## Proč CLI a ne webový generátor
 
 Většina online generátorů QR kódů vyžaduje registraci, platbu za vektorové SVG, cpe do odkazů vlastní redirect domény se sledováním nebo po měsíci kód zneplatní.
@@ -35,7 +24,7 @@ QR kódy běží lokálně v terminálu: vygenerují čisté SVG nebo 300 DPI JP
 - **Příkaz `qr` po ruce.** Žádné přepínání do prohlížeče. Napíšeš text nebo webovou adresu, vybereš barvu a hotový soubor máš hned v `~/Downloads`.
 - **Česká QR Platba (SPAYD) s validací.** Zadáte číslo účtu a aplikace okamžitě zkontroluje kontrolní součet modulo 11 podle vyhlášky ČNB pro předčíslí i samotný účet. Nestane se, že bys vygeneroval platební kód s překlepem. Účet automaticky převede na mezinárodní IBAN a sestaví oficiální standard SPAYD pro české bankovnictví.
 - **Vlastní barvy a branding.** Vybereš si z přednastavených palet nebo zadáš libovolný HEX kód své značky. Umí i průhledné pozadí, když kód dáváš do grafických podkladů.
-- **Popisek s Google Fonts.** Přímo pod QR kód můžeš přidat vystředěný text (třeba *„Odkaz na vstupenky“* nebo *„Platba za kávu“*) v písmu z Google Fonts s plnou podporou české diakritiky. Text je proporčně škálovaný k šířce kódu, aby nikdy nepřetekl.
+- **Popisek s Google Fonts.** Přímo pod QR kód můžeš přidat vystředěný text (třeba _„Odkaz na vstupenky“_ nebo _„Platba za kávu“_) v písmu z Google Fonts s plnou podporou české diakritiky. Text je proporčně škálovaný k šířce kódu, aby nikdy nepřetekl.
 - **Hlídání limitů matrice i překlepů.** Průběžně vidíš délku v bajtech a procentuální zaplnění kapacity QR matrice. U URL zkontroluje formát a upozorní tě na mezery nebo chybějící protokol.
 - **ANSI náhled v terminálu i QuickLook.** Kód vidíš přímo v konzoli v barvách brandingu a jedním stiskem si můžeš otevřít systémový QuickLook na Macu ještě před uložením.
 - **Vektorové SVG i 300 DPI JPG pro tisk.** Uložíš si čisté SVG pro web a grafiky nebo rastrové JPG ve vysokém rozlišení (1800×1800 px) připravené pro tisk.
@@ -68,7 +57,7 @@ Aplikace se ovládá šipkami `↑` / `↓` a textovým vstupem podobně jako Cl
 1. **Typ kódu** – Zvolíš, jestli tvoříš webový odkaz / text, nebo českou QR Platbu.
 2. **Zadání údajů** – U platby zadáš číslo účtu (např. `19-2000145399/0800`), částku a volitelná pole (zpráva, variabilní symbol...). Pole, která nechceš vyplňovat, jednoduše přeskočíš klávesou Enter.
 3. **Vzhled a barva** – Vybereš barvu z nabídky nebo napíšeš vlastní HEX kód.
-4. **Popisek pod kódem** – Volitelně napíšeš text a vybereš Google Font (*Poppins, Inter, Montserrat...*).
+4. **Popisek pod kódem** – Volitelně napíšeš text a vybereš Google Font (_Poppins, Inter, Montserrat..._).
 5. **Export** – Zkontroluješ náhled a vybereš SVG, JPG nebo obojí. Soubor se uloží do složky Downloads s přehledným názvem (např. `qr-platba-1500czk-2026-10-20.svg`).
 
 ## Tvoje data
